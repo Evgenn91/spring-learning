@@ -11,11 +11,11 @@
     <context:property-placeholder location="classpath:b_myApp.properties"/>
 
     <bean id = "myPet"
-          class = "com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.Objects.Dog">
+          class = "com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.objects.Dog">
     </bean>
 
     <bean id="myHouse"
-          class="com.github.Evgenn91.b_DI.Objects.House">
+          class="com.github.Evgenn91.b_DI.objects.House">
     </bean>
 
     <!--    это пример DI, мы передали в конструктор myPerson ранее созданный объект myPet-->
@@ -34,7 +34,7 @@
     <!-- <property name="age" value="${person.age}"/> в этой строке мы заполняем поле age значением "30",
        которое прописываем в другом xml файле(файл b_myApp.properties) (это не такая жесткая привязка привязка)-->
     <bean id = "myPerson"
-          class="com.github.Evgenn91.b_DI.Objects.Person">
+          class="com.github.Evgenn91.b_DI.objects.Person">
         <constructor-arg ref="myPet"/>
         <property name="house" ref="myHouse"/>
         <property name="surname" value="Nikulin"/>

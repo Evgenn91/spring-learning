@@ -1,7 +1,7 @@
 package com.github.Evgenn91.d_ConfigurationWithoutXml_and_annot_PropertySource;
 
 
-import com.github.Evgenn91.d_ConfigurationWithoutXml_and_annot_PropertySource.Objects.Person;
+import com.github.Evgenn91.d_ConfigurationWithoutXml_and_annot_PropertySource.objects.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class TestConfWithoutXml {

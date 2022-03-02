@@ -1,7 +1,7 @@
 package com.github.Evgenn91.b_DI;
 
-import com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.Objects.Pet;
-import com.github.Evgenn91.b_DI.Objects.Person;
+import com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.objects.Pet;
+import com.github.Evgenn91.b_DI.objects.Person;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestDI {

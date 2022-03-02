@@ -1,9 +1,9 @@
 package com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif;
 
-import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.Objects.Cat;
-import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.Objects.House;
-import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.Objects.Person;
-import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.Objects.Pet;
+import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.objects.Cat;
+import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.objects.House;
+import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.objects.Person;
+import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.objects.Pet;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

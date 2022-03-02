@@ -17,7 +17,7 @@
     <!--destroy-method="mydestroy" в это строчке мы определили метод в классе Pet, который мы хотим вызвать(spring сам его вызывает) в момент уничтожения бина-->
     <!-- надо также учитывать scope="prototype" у нас или scope="singleton"-->
     <bean id = "myPet"
-          class = "com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.Objects.Dog"
+          class = "com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.objects.Dog"
           scope="singleton"
           init-method="myinit"
           destroy-method="mydestroy">

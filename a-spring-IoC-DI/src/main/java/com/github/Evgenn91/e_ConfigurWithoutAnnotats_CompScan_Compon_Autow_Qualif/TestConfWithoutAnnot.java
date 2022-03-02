@@ -1,7 +1,7 @@
 package com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif;
 
 
-import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.Objects.Person;
+import com.github.Evgenn91.e_ConfigurWithoutAnnotats_CompScan_Compon_Autow_Qualif.objects.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

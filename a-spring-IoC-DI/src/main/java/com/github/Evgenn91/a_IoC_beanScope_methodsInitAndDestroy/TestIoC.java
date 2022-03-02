@@ -1,6 +1,6 @@
 package com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy;
 
-import com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.Objects.Pet;
+import com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.objects.Pet;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestIoC {

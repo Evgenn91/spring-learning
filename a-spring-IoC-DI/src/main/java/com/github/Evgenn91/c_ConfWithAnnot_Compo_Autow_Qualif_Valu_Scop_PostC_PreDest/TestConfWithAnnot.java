@@ -1,7 +1,7 @@
 package com.github.Evgenn91.c_ConfWithAnnot_Compo_Autow_Qualif_Valu_Scop_PostC_PreDest;
 
-import com.github.Evgenn91.c_ConfWithAnnot_Compo_Autow_Qualif_Valu_Scop_PostC_PreDest.Objects.Cat;
-import com.github.Evgenn91.c_ConfWithAnnot_Compo_Autow_Qualif_Valu_Scop_PostC_PreDest.Objects.Person;
+import com.github.Evgenn91.c_ConfWithAnnot_Compo_Autow_Qualif_Valu_Scop_PostC_PreDest.objects.Cat;
+import com.github.Evgenn91.c_ConfWithAnnot_Compo_Autow_Qualif_Valu_Scop_PostC_PreDest.objects.Person;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestConfWithAnnot {
