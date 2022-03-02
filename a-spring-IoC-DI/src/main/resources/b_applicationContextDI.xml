@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--эту строчку мы прописали, чтобы здесь можно было использовать значения из файлов в папке resourses, а именно из файла b_myApp.properties-->
+    <context:property-placeholder location="classpath:b_myApp.properties"/>
+
+    <bean id = "myPet"
+          class = "com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.Objects.Dog">
+    </bean>
+
+    <bean id="myHouse"
+          class="com.github.Evgenn91.b_DI.Objects.House">
+    </bean>
+
+    <!--    это пример DI, мы передали в конструктор myPerson ранее созданный объект myPet-->
+
+    <!--<constructor-arg ref="myPet"/> - в этой строчке мы передаем в конструктор myPerson объект myPet
+    (без этой строчки будет ругаться, т.к. в классе Person у нас нету конструктора без параметров)-->
+    <!--constructor-arg - эта строчка означает, что передали параметр в конструктор-->
+    <!--ref= - это ссылка на параметр-->
+
+    <!-- <property name="house" ref="myHouse"/> в это строке мы заполняем поле house у объекта Person с помощью сеттера-->
+    <!--имя house потому что spring понимает, что это значит setHouse(1ая буква становится заглавной и добавляется в начале set)-->
+
+    <!--<property name="surname" value="Nikulin"/> в этой строке мы заполняем поле surname значением "Nikulin",
+    которое прописываем здесь в xml файле (это жесткая привязка)-->
+
+    <!-- <property name="age" value="${person.age}"/> в этой строке мы заполняем поле age значением "30",
+       которое прописываем в другом xml файле(файл b_myApp.properties) (это не такая жесткая привязка привязка)-->
+    <bean id = "myPerson"
+          class="com.github.Evgenn91.b_DI.Objects.Person">
+        <constructor-arg ref="myPet"/>
+        <property name="house" ref="myHouse"/>
+        <property name="surname" value="Nikulin"/>
+        <property name="age" value="${person.age}"/>
+    </bean>
+</beans>

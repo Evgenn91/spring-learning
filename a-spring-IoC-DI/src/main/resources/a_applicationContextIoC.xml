@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--этот файл необходим для конфигурирования SpringContainer(место где Spring создает объкты и управляет этими объектами)-->
+    <!--myPet(идентификатор бина) - это имя с помощью которого мы "позовем" объект из SpringContainer -->
+
+    <!-- scope="singleton" означает, что наш бин создастся только один раз(он дефолтные, поэтому его можно не прописывать, поэтому он сейчас выделенный),
+    помимо него еще есть scope="prototype" - создается не сразу, а только после обращения к SpringContainer-у -->
+
+    <!--init-method="myinit" в это строчке мы определили метод в классе Pet, который мы хотим вызвать(spring сам его вызывает) в момент создания бина-->
+    <!--destroy-method="mydestroy" в это строчке мы определили метод в классе Pet, который мы хотим вызвать(spring сам его вызывает) в момент уничтожения бина-->
+    <!-- надо также учитывать scope="prototype" у нас или scope="singleton"-->
+    <bean id = "myPet"
+          class = "com.github.Evgenn91.a_IoC_beanScope_methodsInitAndDestroy.Objects.Dog"
+          scope="singleton"
+          init-method="myinit"
+          destroy-method="mydestroy">
+    </bean>
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- строка, ответственная за сканирования наших бинов и регистрацию их в SpringContainer-->
+    <!-- "com.github.Evgenn91.c_ConfWithAnnot_Compo_Autow_Qualif_Valu_Scop_PostC_PreDest" - это путь к корню всех наших папок, где мы ищем бины (бины ищутся по аннотации @Component)-->
+    <context:component-scan base-package="com.github.Evgenn91.c_ConfWithAnnot_Compo_Autow_Qualif_Valu_Scop_PostC_PreDest"/>
+
+    <!--эту строчку мы прописали, чтобы здесь можно было использовать значения из файлов в папке resourses, а именно из файла c_myApp.properties-->
+    <context:property-placeholder location="classpath:c_myApp.properties"/>
+
+</beans>
