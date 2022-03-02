@@ -1,6 +1,4 @@
-package com.github.Evgenn91.f_typeAfterReturning.objects;
-
-import org.springframework.stereotype.Component;
+package com.github.Evgenn91.f_types_AfteRetu_AfteThro_After.objects;
 
 public class Student {
     private String surName;

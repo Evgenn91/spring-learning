@@ -1,6 +1,6 @@
-package com.github.Evgenn91.f_typeAfterReturning.aspects;
+package com.github.Evgenn91.f_types_AfteRetu_AfteThro_After.aspects;
 
-import com.github.Evgenn91.f_typeAfterReturning.objects.Student;
+import com.github.Evgenn91.f_types_AfteRetu_AfteThro_After.objects.Student;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;

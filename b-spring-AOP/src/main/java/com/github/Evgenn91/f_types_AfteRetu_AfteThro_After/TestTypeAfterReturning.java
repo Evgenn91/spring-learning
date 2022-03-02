@@ -1,7 +1,7 @@
-package com.github.Evgenn91.f_typeAfterReturning;
+package com.github.Evgenn91.f_types_AfteRetu_AfteThro_After;
 
-import com.github.Evgenn91.f_typeAfterReturning.objects.Student;
-import com.github.Evgenn91.f_typeAfterReturning.objects.University;
+import com.github.Evgenn91.f_types_AfteRetu_AfteThro_After.objects.Student;
+import com.github.Evgenn91.f_types_AfteRetu_AfteThro_After.objects.University;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
