@@ -11,9 +11,9 @@ public class UniversityLibrary {
         System.out.println("---------------------------");
     }
 
-    public void returnBook() {
-        System.out.println("вернул книгу в университет");
-        System.out.println("---------------------------");
+    public String returnBook() {
+        System.out.println("что то выполняется внутри метода returnBook");
+        return "вернул книгу в университет";
     }
 
     public void getMagazine() {
@@ -21,9 +21,10 @@ public class UniversityLibrary {
         System.out.println("---------------------------");
     }
 
-    public void returnMagazine() {
-        System.out.println("вернул журнал в университет");
-        System.out.println("---------------------------");
+    public String returnMagazine() {
+        System.out.println("что то выполняется внутри метода returnMagazine");
+        int a = 1/0;
+        return "вернул журнал в университет";
     }
 
     public void addBook(String str) {

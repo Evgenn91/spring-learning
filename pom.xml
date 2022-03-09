@@ -11,6 +11,7 @@
     <modules>
         <module>a-spring-IoC-DI</module>
         <module>b-spring-AOP</module>
+        <module>c-spring-MVC</module>
     </modules>
 
     <properties>

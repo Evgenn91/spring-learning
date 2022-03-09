@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+
+  <display-name>spring-cource-mvc</display-name>
+
+  <absolute-ordering />
+
+  <!--  это наш фронт контроллер: <servlet-name>dispatcher</servlet-name> dispatcher - это имя по которому идет обращение к фронт контроллеру-->
+  <!--  класс, который отвечает за этот сервлет: <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> (он уже есть у Spring)-->
+  <!--  <param-value>/WEB-INF/applicationContext.xml</param-value> - описываем где наш файл applicationContext.xtml-->
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <!--<servlet-name>dispatcher</servlet-name> - определяем название сервлета(который ранее создали) -->
+  <!-- <url-pattern>/</url-pattern> - определяем адрес url для диспетчер сервлета -->
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+</web-app>

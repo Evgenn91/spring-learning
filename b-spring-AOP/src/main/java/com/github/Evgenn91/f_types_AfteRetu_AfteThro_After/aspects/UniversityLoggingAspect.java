@@ -2,6 +2,7 @@ package com.github.Evgenn91.f_types_AfteRetu_AfteThro_After.aspects;
 
 import com.github.Evgenn91.f_types_AfteRetu_AfteThro_After.objects.Student;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -40,4 +41,28 @@ public class UniversityLoggingAspect {
         String nameSur = "новое имя";
         firstStudent.setSurName(nameSur);
     }
+
+
+    /**
+     * тип AfterThrowing
+     * выполняется после окончания работы метода,
+     * если в нем было выбрашено исключение
+     */
+
+    @AfterThrowing(value = "execution(* getStr())",throwing = "exception") /* throwing = "exception" - эту строку мы вводим, чтобы получить инфу об исключении */
+    public void afterThrowingGetStudentLoggingAdvice(Throwable exception){/* Throwable exception - также ввели, чтобы получить инф о исключении*/
+        System.out.println("afterThrowingGetStudentLoggingAdvice: сработка в методе getStr(), если в нем возникло исключение");
+        System.out.println("информация об ошибке: "+exception);
+    }
+
+    /**
+     * тип After
+     * выполняется после окончания метода с основной логикой,
+     * вне зависимости от того, завершается ли метод нормально
+     * или выбрасывает исключение
+     *
+     * с помощью него невозможно:
+     * 1) получить доступ к исключению, которое выбросилось из метода с основной логикой;
+     * 2) получить доступ к возвращаемому методом результату
+     */
 }

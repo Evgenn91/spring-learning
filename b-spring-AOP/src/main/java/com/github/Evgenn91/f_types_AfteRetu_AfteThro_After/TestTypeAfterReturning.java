@@ -13,8 +13,25 @@ import java.util.List;
  * но до присвоения результата этого метода какой либо переменной
  * (с его помощью возможно изменять возвращаемый результат)
  */
+
+/**
+ * тип AfterThrowing
+ * выполняется после окончания работы метода,
+ * если в нем было выбрашено исключение
+ */
+
+/**
+ * тип After
+ * выполняется после окончания метода с основной логикой,
+ * вне зависимости от того, завершается ли метод нормально
+ * или выбрасывает исключение
+ *
+ * с помощью него невозможно:
+ * 1) получить доступ к исключению, которое выбросилось из метода с основной логикой;
+ * 2) получить доступ к возвращаемому методом результату
+ */
 public class TestTypeAfterReturning {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
 
         University university = context.getBean("university", University.class);
@@ -23,6 +40,13 @@ public class TestTypeAfterReturning {
         for(Student student: students){
             System.out.println(student);
         }
+
+        try {
+            university.getStr();
+        } catch (Exception e){
+            System.out.println("ошибка!");
+        }
+
 
         context.close();
     }

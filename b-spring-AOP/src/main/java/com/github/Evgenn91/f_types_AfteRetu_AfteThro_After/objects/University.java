@@ -16,4 +16,9 @@ public class University {
     public List<Student> getStudents() {
         return students;
     }
+
+    public String getStr() throws Exception {
+        throw new Exception("экспериментальня ошибка!!");
+//        return "словцо";
+    }
 }

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="a-spring-IoC-DI" />
         <module name="b-spring-AOP" />
+        <module name="c-spring-MVC" />
       </profile>
     </annotationProcessing>
   </component>
