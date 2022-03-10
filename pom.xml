@@ -12,6 +12,7 @@
         <module>a-spring-IoC-DI</module>
         <module>b-spring-AOP</module>
         <module>c-spring-MVC</module>
+        <module>d-spring-MVC-Hibernate-AOP</module>
     </modules>
 
     <properties>

@@ -9,6 +9,7 @@
         <module name="a-spring-IoC-DI" />
         <module name="b-spring-AOP" />
         <module name="c-spring-MVC" />
+        <module name="d-spring-MVC-Hibernate-AOP" />
       </profile>
     </annotationProcessing>
   </component>
