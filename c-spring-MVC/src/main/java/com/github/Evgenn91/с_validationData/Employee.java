@@ -1,6 +1,8 @@
 package com.github.Evgenn91.с_validationData;
 
-import javax.validation.constraints.Size;
+import com.github.Evgenn91.с_validationData.validation.CheckEmail;
+
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,8 +10,15 @@ public class Employee {
 //    этой аннотацией из hibernate-validator мы говорим, что слово должно быть не меньше 2ух символов
     @Size(min = 2, message = "имя не должно быть меньше 2ух символов")
     private String name;
+    @NotEmpty(message = "имя не должно быть пустым")
     private String surname;
+    @Min(value = 5, message = "значение не может быть меньше 5")
+    @Max(value = 100, message = "значение не может быть больше 100")
     private int salary;
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}",message = "пожалуйста используйте формат ххх-хх-хх")
+    private String phoneNumber;
+    @CheckEmail()/* это моя аннотация(реализация в папке validation)*/
+    private String email;
     private String department;
     private Map<String, String> departments;
     private String carBrand;
@@ -30,6 +39,22 @@ public class Employee {
         languageList.put("English","EN");
         languageList.put("Deutch","DE");
         languageList.put("French","FR");
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public Map<String, String> getLanguageList() {

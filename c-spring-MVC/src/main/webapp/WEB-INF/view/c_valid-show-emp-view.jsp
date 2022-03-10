@@ -13,19 +13,23 @@
 <br>
 <br>
 <br>
-Your name: ${employe.name} <%--получаем параметр из контроллера с именем nameAttribute--%>
+Your name: ${employee.name}
 <br>
-Your surname: ${employe.surname}
+Your surname: ${employee.surname}
 <br>
-Your salary: ${employe.salary}
+Your salary: ${employee.salary}
 <br>
-Your department: ${employe.department}
+Your email: ${employee.email}
 <br>
-Your carBrand: ${employe.carBrand}
+Your phoneNumber: ${employee.phoneNumber}
+<br>
+Your department: ${employee.department}
+<br>
+Your carBrand: ${employee.carBrand}
 <br>
 Language(s):
 <ul>
-    <c:forEach var="lang" items="${employe.languages}">
+    <c:forEach var="lang" items="${employee.languages}">
         <li>${lang}</li>
     </c:forEach>
 </ul>

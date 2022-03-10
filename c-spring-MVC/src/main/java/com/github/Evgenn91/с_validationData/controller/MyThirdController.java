@@ -14,24 +14,26 @@ import javax.validation.Valid;
 public class MyThirdController {
     @RequestMapping("/askDetails")
     public String askEmployeeDetails(Model model){
-        Employee emp = new Employee();
-        emp.setName("Ivan");
-        emp.setSurname("Ivanov");
-        emp.setSalary(500);
-        model.addAttribute("employ", emp);
+        model.addAttribute("employee", new Employee());
         return "c_valid-ask-emp-view";
     }
 
     @RequestMapping("/showDetails")
 //    аннотацией @Valid показываем, что атрибут employe должен пройти валидацию
 //    BindingResult - это результат валидации employe(с его помощью узнаем прошла валидацию или нет(должен стоять сразу после модели))
-    public String showEmpDetails(@Valid @ModelAttribute("employe") Employee emp, BindingResult bindingResult){
+    public String showEmpDetails(@Valid @ModelAttribute("employee") Employee emp, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return "c_valid-ask-emp-view";
+            return "c_valid-ask-emp-view";/*есть нюанс, что при вводе русских слов и когда валидацию не пройдет, то русские символы закодируются*/
         } else {
             String name = emp.getName();
             emp.setName("Mr. "+name);
             return "c_valid-show-emp-view";
         }
     }
+
+    /**
+     * есть нюанс с названиями: при добавлении валидации имя,
+     * используемое в jsf-ках, а именно: "employee" в стоке 17 и 24
+     * должно быть одинаковое!!!!
+     */
 }
