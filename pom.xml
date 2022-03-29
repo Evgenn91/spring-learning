@@ -13,6 +13,9 @@
         <module>b-spring-AOP</module>
         <module>c-spring-MVC</module>
         <module>d-spring-MVC-Hibernate-AOP</module>
+        <module>e-spring-REST</module>
+        <module>f-spring-REST-client-forProject-e</module>
+        <module>g-spring-Security</module>
     </modules>
 
     <properties>

@@ -6,5 +6,9 @@
     <file url="file://$PROJECT_DIR$/b-spring-AOP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/c-spring-MVC/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/d-spring-MVC-Hibernate-AOP/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e-spring-REST/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/f-spring-REST-client-forProject-e/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/g-spring-Security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/h-spring-Boot/src/main/java" charset="UTF-8" />
   </component>
 </project>

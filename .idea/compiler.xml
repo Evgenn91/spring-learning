@@ -6,11 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="a-spring-IoC-DI" />
         <module name="b-spring-AOP" />
-        <module name="c-spring-MVC" />
+        <module name="e-spring-REST" />
         <module name="d-spring-MVC-Hibernate-AOP" />
+        <module name="a-spring-IoC-DI" />
+        <module name="g-spring-Security" />
+        <module name="c-spring-MVC" />
+        <module name="h-spring-Boot" />
+        <module name="f-spring-REST-client-forProject-e" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="f-spring -REST-client-forProject-e" target="1.7" />
+      <module name="test_DB" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="h-spring-Boot" options="-parameters" />
+    </option>
   </component>
 </project>
